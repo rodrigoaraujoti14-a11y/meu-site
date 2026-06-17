@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RTI Sistemas 360 | Sistema comercial para lojas</title>
+<meta name="description" content="Sistema comercial para lojas, mercados e restaurantes com PDV, estoque, financeiro e suporte próximo da sua operação." />
+<meta property="og:title" content="RTI Sistemas 360 | Sistema comercial para lojas" />
+<meta property="og:description" content="Mais controle para loja, mercado e restaurante com uma apresentação moderna da RTI Sistemas 360." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://photo-boost-buddy-46.lovable.app/__l5e/assets-v1/6b595c70-756b-4261-a86f-fc080fa9864d/rti-hero.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0a1628; --bg-soft:#0f1f3a; --panel:#13294b; --panel-2:#1a3567;
+  --primary:#ffb800; --primary-2:#ffc940; --accent:#16c172; --blue:#2a7de1;
+  --text:#f5f7fb; --text-dim:#cbd5e1; --border:rgba(255,255,255,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow-badge{display:inline-block;background:rgba(255,184,0,.15);color:var(--primary-2);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s;border:2px solid transparent}
+.btn-primary{background:var(--primary);color:#0a1628}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(255,184,0,.35)}
+.btn-outline{border-color:var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary-2)}
+.section-band{padding:80px 0}
+.section-title{font-size:clamp(28px,3.6vw,42px);font-weight:800;line-height:1.15;margin:14px 0}
+.section-copy{color:var(--text-dim);font-size:17px;max-width:680px}
+
+/* Hero */
+.hero-section{background:linear-gradient(135deg,#0a1628 0%,#13294b 60%,#1a3567 100%);padding:90px 0 70px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero-title{font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.1;margin:16px 0}
+.hero-copy{color:var(--text-dim);font-size:18px;max-width:560px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.stats-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;padding-top:28px;border-top:1px solid var(--border)}
+.stats-strip strong{display:block;color:var(--primary-2);font-size:18px;font-weight:700}
+.stats-strip span{color:var(--text-dim);font-size:13px}
+.hero-media{border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+
+/* Banner */
+.banner-section{padding:40px 0;background:var(--bg-soft)}
+.banner-link{display:block;border-radius:18px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.3);transition:transform .25s}
+.banner-link:hover{transform:scale(1.01)}
+
+/* Features */
+.section-light{background:#f5f7fb;color:#0a1628}
+.compact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature-panel{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:24px;transition:transform .2s,box-shadow .2s}
+.feature-panel:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(10,22,40,.1)}
+.feature-panel h3{font-size:18px;font-weight:700;margin-bottom:8px;color:#0a1628}
+.feature-panel p{color:#475569;font-size:14px}
+
+/* Solutions dark */
+.section-dark{background:#0a1628}
+.section-stack{display:flex;flex-direction:column;gap:36px}
+.section-heading{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.section-heading .section-copy{text-align:center}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.filter-chip{padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--text-dim);font-weight:500;font-size:14px;transition:all .15s}
+.filter-chip:hover{color:var(--text);border-color:var(--primary);cursor:pointer;}
+.filter-chip.is-active{background:var(--primary);color:#0a1628;border-color:var(--primary);font-weight:700}
+.showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.showcase-card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.showcase-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,.4)}
+.showcase-image{aspect-ratio:1/1;object-fit:cover;width:100%}
+.showcase-copy{padding:16px}
+.showcase-copy h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.showcase-copy p{font-size:13px;color:var(--text-dim)}
+
+/* Promise */
+.section-accent{background:linear-gradient(135deg,#13294b,#1a3567)}
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.promise-list{display:flex;flex-direction:column;gap:16px}
+.promise-item{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:12px;padding:18px}
+.promise-item strong{display:block;color:var(--primary-2);margin-bottom:4px}
+.promise-item span{color:var(--text-dim);font-size:14px}
+
+/* CTA */
+.section-footer-cta{background:#0a1628;padding:60px 0}
+.footer-cta-box{background:linear-gradient(135deg,var(--panel),var(--panel-2));border:1px solid var(--border);border-radius:20px;padding:48px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:32px}
+
+/* Footer */
+.site-footer{background:#060f1e;padding:40px 0;border-top:1px solid var(--border)}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start}
+.footer-grid strong{display:block;color:var(--primary-2);margin-bottom:6px}
+.footer-grid p,.footer-meta{color:var(--text-dim);font-size:14px}
+.footer-contact{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.footer-contact a:hover{color:var(--primary-2)}
+.footer-meta{text-align:right}
+
+/* WhatsApp FAB */
+.whatsapp-fab{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:50;transition:transform .2s}
+.whatsapp-fab:hover{transform:scale(1.08)}
+
+@media (max-width:900px){
+  .hero-grid,.promise-grid{grid-template-columns:1fr}
+  .compact-grid{grid-template-columns:repeat(2,1fr)}
+  .showcase-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-meta{text-align:left}
+  .stats-strip{grid-template-columns:1fr}
+  .footer-cta-box{padding:32px}
+  .section-band{padding:60px 0}
+}
+@media (max-width:520px){
+  .showcase-grid,.compact-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<main>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow-badge">RTI Sistemas 360</span>
+      <h1 class="hero-title">Sistema comercial para sua loja vender com mais controle.</h1>
+      <p class="hero-copy">PDV, estoque, financeiro e gestão comercial em uma experiência mais simples, rápida e profissional para mercados, mercearias e restaurantes.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/5575981927218?text=Quero+uma+demonstração+da+RTI" target="_blank" rel="noreferrer">Solicitar demonstração</a>
+        <a class="btn btn-outline" href="tel:+557531990675">📞 (75) 3199-0675</a>
+      </div>
+      <div class="stats-strip">
+        <div><strong>10 dias</strong><span>Demonstração inicial</span></div>
+        <div><strong>Varejo</strong><span>Mercados, lojas e restaurantes</span></div>
+        <div><strong>Suporte</strong><span>Atendimento direto no WhatsApp</span></div>
+      </div>
+    </div>
+    <div>
+      <img class="hero-media" src="https://photo-boost-buddy-46.lovable.app/__l5e/assets-v1/6b595c70-756b-4261-a86f-fc080fa9864d/rti-hero.png" alt="Peça promocional da RTI Sistemas 360" />
+    </div>
+  </div>
+</section>
+
+<!-- BANNER CONSOLIDADO -->
+<section class="banner-section">
+  <div class="container">
+    <a class="banner-link" href="https://wa.me/5575981927218" target="_blank" rel="noreferrer">
+      <img src="Cópia de Flexibilidade, desempenho e agilidade.jpg" alt="Sua Solução Comercial Completa - RTI Sistemas 360" />
+    </a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section-band section-light">
+  <div class="container compact-grid">
+    <div class="feature-panel"><h3>PDV rápido</h3><p>Venda com mais fluidez e reduza filas no balcão e no caixa.</p></div>
+    <div class="feature-panel"><h3>Estoque sob controle</h3><p>Acompanhe entradas, saídas, reposição e redução de perdas.</p></div>
+    <div class="feature-panel"><h3>Financeiro mais claro</h3><p>Visualize vendas, results e movimento do negócio com facilidade.</p></div>
+    <div class="feature-panel"><h3>Suporte próximo</h3><p>Atendimento direto para acelerar implantação e operação diária.</p></div>
+  </div>
+</section>
+
+<!-- SOLUTIONS GRID COM TODAS AS FOTOS REORGANIZADAS -->
+<section id="solucoes" class="section-band section-dark">
+  <div class="container section-stack">
+    <div class="section-heading">
+      <span class="eyebrow-badge">Soluções visuais</span>
+      <h2 class="section-title">Suas artes agora fazem parte do site com uma apresentação mais forte.</h2>
+      <p class="section-copy">Filtre por segmento para ver as soluções mais relevantes para o seu negócio.</p>
+    </div>
+    <div class="filter-bar" role="tablist">
+      <button class="filter-chip is-active" data-filter="todos">Todos</button>
+      <button class="filter-chip" data-filter="restaurantes">Bares e Restaurantes</button>
+      <button class="filter-chip" data-filter="supermercados">Supermercados e Lojas</button>
+      <button class="filter-chip" data-filter="vendas">Força de Vendas</button>
+    </div>
+    <div class="showcase-grid" id="showcase">
+      <!-- RESTAURANTES -->
+      <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="Cópia de food - comandas eletronicas.jpg" alt="Comandas eletrônicas" loading="lazy"/><div class="showcase-copy"><h3>Comandas eletrônicas</h3><p>Mais agilidade no atendimento e menos erros na operação do restaurante.</p></div></article>
+      <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="Cópia de food - torne a gestão de pedidos.jpg" alt="Gestão de pedidos" loading="lazy"/><div class="showcase-copy"><h3>Gestão de pedidos</h3><p>Fluxo de pedidos mais organizado para ganhar velocidade no salão e na cozinha.</p></div></article>
+      <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="Cópia de food - importancia da tecnologia.jpg" alt="Tecnologia contra desperdício" loading="lazy"/><div class="showcase-copy"><h3>Tecnologia contra desperdício</h3><p>Controle inteligente que ajuda a reduzir perdas e melhorar o giro dos pratos.</p></div></article>
+      <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="Cópia de food - inove a gestão.jpg" alt="Gestão moderna do restaurante" loading="lazy"/><div class="showcase-copy"><h3>Gestão moderna</h3><p>Soluções completas com software da LC Sistemas para o seu salão.</p></div></article>
+      
+      <!-- SUPERMERCADOS E LOJAS -->
+      <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="Cópia de supermercado - como evitar rupturas.jpg" alt="Evite rupturas de estoque" loading="lazy"/><div class="showcase-copy"><h3>Evite rupturas de estoque</h3><p>Acompanhe produtos e reposição com mais previsibilidade no supermercado.</p></div></article>
+      <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="Cópia de supermercado - não perca tempo.jpg" alt="Não perca tempo com preços" loading="lazy"/><div class="showcase-copy"><h3>Preços Simplificados</h3><p>Simplifique e automatize as atualizações e margens de preço nas prateleiras.</p></div></article>
+      <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="Cópia de supermercado -vai abrir uma mercearia.jpg" alt="Sistema para abrir sua mercearia" loading="lazy"/><div class="showcase-copy"><h3>Abrir uma Mercearia</h3><p>Comece a gestão do seu novo comércio da melhor forma possível.</p></div></article>
+      <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="Cópia de PRECISA DE.jpg" alt="Precisa de um sistema comercial" loading="lazy"/><div class="showcase-copy"><h3>Demonstração Gratuita</h3><p>Teste o sistema completo na sua loja sem compromisso por 10 dias inteiros.</p></div></article>
+
+      <!-- FORÇA DE VENDAS -->
+      <article class="showcase-card" data-cat="vendas"><img class="showcase-image" src="Cópia de vendas - APP para o sucesso.jpg" alt="APP LC Força de Vendas" loading="lazy"/><div class="showcase-copy"><h3>APP Força de Vendas</h3><p>O aplicativo definitivo para gerenciar vendas externas direto do smartphone.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="section-band section-accent">
+  <div class="container promise-grid">
+    <div>
+      <span class="eyebrow-badge">Por que escolher a RTI</span>
+      <h2 class="section-title">Uma página mais confiável para apresentar seu sistema comercial.</h2>
+      <p class="section-copy">Melhorei o visual, dei mais destaque para sua oferta principal e organizei as peças em um layout mais profissional para passar confiança logo no primeiro acesso.</p>
+    </div>
+    <div class="promise-list">
+      <div class="promise-item"><strong>Oferta clara</strong><span>Demonstração e contato aparecem logo no topo.</span></div>
+      <div class="promise-item"><strong>Visual consistente</strong><span>Paleta alinhada com amarelo, azul, verde e fundo escuro.</span></div>
+      <div class="promise-item"><strong>Mais credibilidade</strong><span>Seções organizadas, boa hierarquia e imagens valorizadas.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-footer-cta">
+  <div class="container footer-cta-box">
+    <div>
+      <span class="eyebrow-badge">Fale com a RTI</span>
+      <h2 class="section-title">Pronto para testar o sistema na sua operação?</h2>
+      <p class="section-copy">Entre em contato para conhecer a demonstração e entender qual solução combina melhor com o seu negócio.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://wa.me/5575981927218?text=Quero+uma+demonstração+da+RTI" target="_blank" rel="noreferrer">💬 Chamar no WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+557531990675">📞 (75) 3199-0675</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><strong>RTI Sistemas 360</strong><p>Sistema comercial para mercados, lojas e restaurantes.</p></div>
+    <div class="footer-contact">
+      <span style="color:var(--primary-2);font-weight:600">Comercial</span>
+      <a href="tel:+557531990675">📞 (75) 3199-0675</a>
+      <a href="https://wa.me/5575981927218" target="_blank" rel="noreferrer">💬 WhatsApp: (75) 98192-7218</a>
+    </div>
+    <div class="footer-meta">© <span id="year"></span> RTI Sistemas 360. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+</main>
+
+<!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+<a class="whatsapp-fab" href="https://wa.me/5575981927218?text=Quero+uma+demonstração+da+RTI" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+    <path fill="#fff" d="M16.001 3C9.373 3 4 8.373 4 15c0 2.39.736 4.68 2.13 6.65L4 29l7.55-2.07A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3Zm0 21.6a9.59 9.59 0 0 1-4.88-1.34l-.35-.21-4.48 1.22 1.2-4.36-.23-.36A9.6 9.6 0 1 1 25.6 15c0 5.302-4.298 9.6-9.6 9.6Zm5.46-7.21c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18c-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.63-.93-2.23-.24-.59-.49-.51-.68-.52l-.58-.01c-.2 0-.52.07-.79.38-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.62.71.22 1.36.19 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35Z"/>
+  </svg>
+</a>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const chips = document.querySelectorAll('.filter-chip');
+const cards = document.querySelectorAll('#showcase .showcase-card');
+chips.forEach(chip => chip.addEventListener('click', () => {
+  chips.forEach(c => c.classList.remove('is-active'));
+  chip.classList.add('is-active');
+  const f = chip.dataset.filter;
+  cards.forEach(card => {
+    card.style.display = (f === 'todos' || card.dataset.cat === f) ? '' : 'none';
+  });
+}));
+</script>
+</body>
+</html>
