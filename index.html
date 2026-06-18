@@ -71,7 +71,15 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .showcase-card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
 .showcase-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,.4)}
-.showcase-image{aspect-ratio:1/1;object-fit:cover;width:100%}
+
+/* CORREÇÃO DO CORTE DA IMAGEM AQUI */
+.showcase-image{
+  aspect-ratio:1/1;
+  object-fit:contain; /* Ajusta a foto para caber inteira sem cortar */
+  background:rgba(0, 0, 0, 0.2); /* Cria um fundo sutil para preencher as bordas laterais */
+  width:100%;
+}
+
 .showcase-copy{padding:16px}
 .showcase-copy h3{font-size:16px;font-weight:700;margin-bottom:6px}
 .showcase-copy p{font-size:13px;color:var(--text-dim)}
@@ -158,7 +166,7 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
     <div class="feature-panel"><h3>PDV rápido</h3><p>Venda com mais fluidez e reduza filas no balcão e no caixa.</p></div>
     <div class="feature-panel"><h3>Estoque sob controle</h3><p>Acompanhe entradas, saídas, reposição e redução de perdas.</p></div>
     <div class="feature-panel"><h3>Financeiro mais claro</h3><p>Visualize vendas, resultados e movimento do negócio com facilidade.</p></div>
-    <div class="feature-panel"><h3>Suporte próximo</h3><p>Atendimento direto para acelerar implantação e operation diária.</p></div>
+    <div class="feature-panel"><h3>Suporte próximo</h3><p>Atendimento direto para acelerar implantação e operação diária.</p></div>
   </div>
 </section>
 
@@ -179,7 +187,7 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
     <div class="showcase-grid" id="showcase">
       <!-- RESTAURANTES -->
       <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="comandas-eletronicas.png" alt="Comandas eletrônicas" loading="lazy"/><div class="showcase-copy"><h3>Comandas eletrônicas</h3><p>Mais agilidade no atendimento e menos erros na operação do restaurante.</p></div></article>
-      <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="torne-gestão-pedidos.png" alt="Gestão de pedidos" loading="lazy"/><div class="showcase-copy"><h3>Gestão de pedidos</h3><p>Fluxo de pedidos mais organized para ganhar velocidade no salão e na cozinha.</p></div></article>
+      <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="torne-gestão-pedidos.png" alt="Gestão de pedidos" loading="lazy"/><div class="showcase-copy"><h3>Gestão de pedidos</h3><p>Fluxo de pedidos mais organizado para ganhar velocidade no salão e na cozinha.</p></div></article>
       <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="food-importancia-tecnologia.png" alt="Tecnologia contra desperdício" loading="lazy"/><div class="showcase-copy"><h3>Tecnologia contra desperdício</h3><p>Controle inteligente que ajuda a reduzir perdas e melhorar o giro dos pratos.</p></div></article>
       <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="restourante.png" alt="Gestão moderna do restaurante" loading="lazy"/><div class="showcase-copy"><h3>Gestão moderna</h3><p>Soluções completas com software da LC Sistemas para o seu salão.</p></div></article>
       <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="tela-pdv.png" alt="PDV Integrado" loading="lazy"/><div class="showcase-copy"><h3>PDV Integrado</h3><p>Agilidade nas transações e controle de caixa na ponta dos dedos.</p></div></article>
