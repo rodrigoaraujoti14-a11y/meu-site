@@ -8,7 +8,7 @@
 <meta property="og:title" content="RTI Sistemas 360 | Sistema comercial para lojas" />
 <meta property="og:description" content="Mais controle para loja, mercado e restaurante com uma apresentação moderna da RTI Sistemas 360." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://photo-boost-buddy-46.lovable.app/__l5e/assets-v1/6b595c70-756b-4261-a86f-fc080fa9864d/rti-hero.png" />
+<meta property="og:image" content="https://www.rtisistemas360.com.br/tela-pdv.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +25,12 @@ img{max-width:100%;display:block;height:auto}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.site-header{position:sticky;top:0;z-index:60;background:rgba(6,15,30,.94);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
+.nav-wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-weight:800;font-size:18px}.brand span{color:var(--primary)}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:14px;color:var(--text-dim)}
+.nav-links a:hover{color:var(--primary-2)}
+.nav-cta{padding:10px 16px}
 .eyebrow-badge{display:inline-block;background:rgba(255,184,0,.15);color:var(--primary-2);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s;border:2px solid transparent}
 .btn-primary{background:var(--primary);color:#0a1628}
@@ -36,7 +42,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .section-copy{color:var(--text-dim);font-size:17px;max-width:680px}
 
 /* Hero */
-.hero-section{background:linear-gradient(135deg,#0a1628 0%,#13294b 60%,#1a3567 100%);padding:90px 0 70px;position:relative;overflow:hidden}
+.hero-section{background:linear-gradient(135deg,#0a1628 0%,#13294b 60%,#1a3567 100%);padding:72px 0 64px;position:relative;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
 .hero-title{font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.1;margin:16px 0}
 .hero-copy{color:var(--text-dim);font-size:18px;max-width:560px}
@@ -44,7 +50,9 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .stats-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;padding-top:28px;border-top:1px solid var(--border)}
 .stats-strip strong{display:block;color:var(--primary-2);font-size:18px;font-weight:700}
 .stats-strip span{color:var(--text-dim);font-size:13px}
-.hero-media{border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.hero-visual{position:relative;padding:18px}
+.hero-media{border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.16);width:100%;background:#fff}
+.hero-proof{position:absolute;right:0;bottom:0;background:var(--primary);color:#0a1628;padding:12px 16px;border-radius:12px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 
 /* Banner */
 .banner-section{padding:40px 0;background:var(--bg-soft)}
@@ -75,6 +83,11 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .showcase-copy{padding:16px}
 .showcase-copy h3{font-size:16px;font-weight:700;margin-bottom:6px}
 .showcase-copy p{font-size:13px;color:var(--text-dim)}
+.showcase-card.is-extra{display:none}
+.showcase-actions{text-align:center}
+.system-preview{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:30px}
+.system-preview img{border-radius:14px;border:1px solid #cbd5e1;box-shadow:0 18px 40px rgba(10,22,40,.14)}
+.check-list{list-style:none;display:grid;gap:12px;margin-top:22px}.check-list li{display:flex;gap:10px;color:#334155}.check-list li::before{content:'✓';color:#047857;font-weight:800}
 
 /* Promise */
 .section-accent{background:linear-gradient(135deg,#13294b,#1a3567)}
@@ -96,61 +109,67 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .footer-contact{display:flex;flex-direction:column;gap:6px;font-size:14px}
 .footer-contact a:hover{color:var(--primary-2)}
 .footer-meta{text-align:right}
+.legal-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}.legal-links a{text-decoration:underline;text-underline-offset:3px}
+.legal-section{background:#081426;border-top:1px solid var(--border);padding:34px 0}.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.legal-grid h2{font-size:18px;margin-bottom:8px}.legal-grid p{font-size:13px;color:var(--text-dim)}
 
 /* WhatsApp FAB */
 .whatsapp-fab{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:50;transition:transform .2s}
 .whatsapp-fab:hover{transform:scale(1.08)}
 
 @media (max-width:900px){
-  .hero-grid,.promise-grid{grid-template-columns:1fr}
+  .hero-grid,.promise-grid,.system-preview{grid-template-columns:1fr}
+  .nav-links a:not(.nav-cta){display:none}
   .compact-grid{grid-template-columns:repeat(2,1fr)}
   .showcase-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr}
   .footer-meta{text-align:left}
+  .legal-grid{grid-template-columns:1fr}
   .stats-strip{grid-template-columns:1fr}
   .footer-cta-box{padding:32px}
   .section-band{padding:60px 0}
 }
 @media (max-width:520px){
   .showcase-grid,.compact-grid{grid-template-columns:1fr}
+  .hero-section{padding-top:52px}.hero-title{font-size:36px}.hero-copy{font-size:16px}.nav-wrap{min-height:64px}
 }
 </style>
 </head>
 <body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#inicio">RTI <span>Sistemas 360</span></a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#recursos">Recursos</a><a href="#solucoes">Segmentos</a><a href="#demonstracao">Demonstração</a><a href="#contato">Contato</a>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/5575981927218?text=Quero+testar+o+Sistema+RTI+por+10+dias" target="_blank" rel="noreferrer">Testar grátis</a>
+    </nav>
+  </div>
+</header>
 <main>
 
-<section class="hero-section">
+<section class="hero-section" id="inicio">
   <div class="container hero-grid">
     <div>
       <span class="eyebrow-badge">RTI Sistemas 360</span>
-      <h1 class="hero-title">Sistema comercial para sua loja vender com mais controle.</h1>
-      <p class="hero-copy">Controle total do seu comércio, sem complicação.
-PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, simples e profissional. Seja você dono de mercado, loja de roupas, autopeças ou qualquer outro segmento: o sistema se adapta ao seu negócio. Diga adeus às planilhas e experimente grátis hoje mesmo!</p>
+      <h1 class="hero-title">Venda mais e controle sua empresa em um só sistema.</h1>
+      <p class="hero-copy">PDV, estoque e financeiro integrados para mercados, lojas, restaurantes e prestadores de serviço. Fácil de usar e com suporte direto pelo WhatsApp.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/5575981927218?text=Quero+uma+demonstração+da+RTI" target="_blank" rel="noreferrer">Solicitar demonstração</a>
-        <a class="btn btn-outline" href="tel:+557598192-7218">📞 (75) 98192-7218</a>
+        <a class="btn btn-primary" href="https://wa.me/5575981927218?text=Quero+testar+o+Sistema+RTI+por+10+dias" target="_blank" rel="noreferrer">Testar grátis por 10 dias</a>
+        <a class="btn btn-outline" href="tel:+5575981927218">📞 (75) 98192-7218</a>
       </div>
       <div class="stats-strip">
         <div><strong>10 dias</strong><span>Demonstração inicial</span></div>
-        <div><strong>Varejo</strong><span>mercados,distribuidora, lojas de roupas, oficinas, restaurantes e qualquer tipo de comércio. Experimente grátis hoje mesmo!</span></div>
+        <div><strong>Vários segmentos</strong><span>Uma solução que acompanha a rotina do seu negócio</span></div>
         <div><strong>Suporte</strong><span>Atendimento direto no WhatsApp</span></div>
       </div>
     </div>
-    <div>
-      <img class="hero-media" src="https://photo-boost-buddy-46.lovable.app/__l5e/assets-v1/6b595c70-756b-4261-a86f-fc080fa9864d/rti-hero.png" alt="Peça promocional da RTI Sistemas 360" />
+    <div class="hero-visual">
+      <img class="hero-media" src="tela-pdv.png" alt="Tela real do PDV RTI Sistemas 360" />
+      <span class="hero-proof">Sistema rápido e fácil</span>
     </div>
   </div>
 </section>
 
-<section class="banner-section">
-  <div class="container">
-    <a class="banner-link" href="https://wa.me/5575981927218" target="_blank" rel="noreferrer">
-      <img src="whasapp1.png" alt="Sua Solução Comercial Completa - RTI Sistemas 360" />
-    </a>
-  </div>
-</section>
-
-  <section class="section-band section-light">
+  <section class="section-band section-light" id="recursos">
   <div class="container compact-grid">
     <div class="feature-panel"><h3>PDV rápido</h3><p>Venda com mais fluidez e reduza filas no balcão e no caixa.</p></div>
     <div class="feature-panel"><h3>Estoque sob controle</h3><p>Acompanhe entradas, saídas, reposição e redução de perdas.</p></div>
@@ -159,12 +178,19 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
   </div>
 </section>
 
+<section class="section-band section-light" id="demonstracao" style="padding-top:0">
+  <div class="container system-preview">
+    <img src="tela-sistema.png" alt="Painel de gestão do RTI Sistemas 360" loading="lazy" />
+    <div><span class="eyebrow-badge">Veja o sistema funcionando</span><h2 class="section-title">Informações claras para decidir melhor.</h2><p class="section-copy">Acompanhe as principais informações da empresa em telas organizadas e tenha mais segurança na operação diária.</p><ul class="check-list"><li>Vendas e caixa integrados</li><li>Estoque atualizado</li><li>Financeiro e relatórios</li><li>Implantação com suporte próximo</li></ul><div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/5575981927218?text=Quero+ver+uma+demonstração+do+Sistema+RTI" target="_blank" rel="noreferrer">Pedir demonstração</a></div></div>
+  </div>
+</section>
+
 <section id="solucoes" class="section-band section-dark">
   <div class="container section-stack">
     <div class="section-heading">
       <span class="eyebrow-badge">Conheça o Sistema</span>
-      <h2 class="section-title">A solução ideal para simplificar a gestão do teu negócio.</h2>
-      <p class="section-copy">Escolhe o teu segmento abaixo e vê como a RTI Sistemas 360 otimiza a tua operação diária.</p>
+      <h2 class="section-title">A solução ideal para simplificar a gestão do seu negócio.</h2>
+      <p class="section-copy">Escolha o seu segmento e veja como a RTI Sistemas 360 pode otimizar sua operação diária.</p>
     </div>
     
     <div class="filter-bar" role="tablist">
@@ -195,35 +221,36 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
       <article class="showcase-card" data-cat="restaurantes"><img class="showcase-image" src="cadastro-produtos.png" alt="Facilidade de Cadastro" loading="lazy"/><div class="showcase-copy"><h3>Facilidade de Cadastro</h3><p>Organização prática de produtos, insumos e variações do cardápio.</p></div></article>
       
       <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="supermercado.png" alt="Evite rupturas de estoque" loading="lazy"/><div class="showcase-copy"><h3>Evite rupturas de estoque</h3><p>Acompanhe produtos e reposição com mais previsibilidade no supermercado.</p></div></article>
-      <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="supermercado1.png" alt="Não perca tempo com preços" loading="lazy"/><div class="showcase-copy"><h3>Preços Simplificados</h3><p>Simplifique e automatize as atualizações e margens de preço nas prateleiras.</p></div></article>
+      <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="supermercado1.png" alt="Não perca tempo com preços" loading="lazy"/><div class="showcase-copy"><h3>Preços simplificados</h3><p>Simplifique e automatize as atualizações e margens de preço nas prateleiras.</p></div></article>
       <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="supermercado2.png" alt="Sistema para abrir sua mercearia" loading="lazy"/><div class="showcase-copy"><h3>Abrir uma Mercearia</h3><p>Comece a gestão do seu novo comércio da melhor forma possível.</p></div></article>
       <article class="showcase-card" data-cat="supermercados"><img class="showcase-image" src="PRECISA.png" alt="Precisa de um sistema comercial" loading="lazy"/><div class="showcase-copy"><h3>Demonstração Gratuita</h3><p>Teste o sistema completo na sua loja sem compromisso por 10 dias inteiros.</p></div></article>
 
       <article class="showcase-card" data-cat="vendas"><img class="showcase-image" src="APP-forca-venda.png" alt="APP LC Força de Vendas" loading="lazy"/><div class="showcase-copy"><h3>APP Força de Vendas</h3><p>O aplicativo definitivo para gerenciar vendas externas direto do smartphone.</p></div></article>
 
-      <article class="showcase-card" data-cat="roupas"><img class="showcase-image" src="sua-foto.png" alt="Controle de Grade" loading="lazy"/><div class="showcase-copy"><h3>Controle de Grade</h3><p>Gerencie produtos por tamanho, cor e modelo de maneira simples e eficiente.</p></div></article>
+      <article class="showcase-card" data-cat="roupas"><img class="showcase-image" src="tela-sistema.png" alt="Controle de Grade" loading="lazy"/><div class="showcase-copy"><h3>Controle de Grade</h3><p>Gerencie produtos por tamanho, cor e modelo de maneira simples e eficiente.</p></div></article>
 
-      <article class="showcase-card" data-cat="oficinas"><img class="showcase-image" src="sua-foto.png" alt="Ordem de Serviço" loading="lazy"/><div class="showcase-copy"><h3>Ordens de Serviço</h3><p>Controle serviços prestados, mecânicos e peças aplicadas em cada veículo.</p></div></article>
+      <article class="showcase-card" data-cat="oficinas"><img class="showcase-image" src="tela-sistema.png" alt="Ordem de Serviço" loading="lazy"/><div class="showcase-copy"><h3>Ordens de Serviço</h3><p>Controle serviços prestados, mecânicos e peças aplicadas em cada veículo.</p></div></article>
 
-      <article class="showcase-card" data-cat="padarias"><img class="showcase-image" src="sua-foto.png" alt="Ficha Técnica" loading="lazy"/><div class="showcase-copy"><h3>Ficha Técnica e Produção</h3><p>Controle o consumo de matéria-prima e o custo real de cada produto produzido.</p></div></article>
+      <article class="showcase-card" data-cat="padarias"><img class="showcase-image" src="tela-sistema.png" alt="Ficha Técnica" loading="lazy"/><div class="showcase-copy"><h3>Ficha Técnica e Produção</h3><p>Controle o consumo de matéria-prima e o custo real de cada produto produzido.</p></div></article>
 
-      <article class="showcase-card" data-cat="acougues"><img class="showcase-image" src="sua-foto.png" alt="Controle de Desossa" loading="lazy"/><div class="showcase-copy"><h3>Desossa e Rendimento</h3><p>Gestão precisa de lotes, pesos, validades e rendimentos de peças de carne.</p></div></article>
+      <article class="showcase-card" data-cat="acougues"><img class="showcase-image" src="tela-sistema.png" alt="Controle de Desossa" loading="lazy"/><div class="showcase-copy"><h3>Desossa e Rendimento</h3><p>Gestão precisa de lotes, pesos, validades e rendimentos de peças de carne.</p></div></article>
 
-      <article class="showcase-card" data-cat="farmacias"><img class="showcase-image" src="sua-foto.png" alt="Princípio Ativo" loading="lazy"/><div class="showcase-copy"><h3>Lotes e Validades</h3><p>Rastreamento completo de medicamentos por lote, validade e laboratório.</p></div></article>
+      <article class="showcase-card" data-cat="farmacias"><img class="showcase-image" src="tela-sistema.png" alt="Princípio Ativo" loading="lazy"/><div class="showcase-copy"><h3>Lotes e Validades</h3><p>Rastreamento completo de medicamentos por lote, validade e laboratório.</p></div></article>
 
-      <article class="showcase-card" data-cat="construcao"><img class="showcase-image" src="sua-foto.png" alt="Venda Balcão" loading="lazy"/><div class="showcase-copy"><h3>Vendas e Entregas</h3><p>Gerencie cargas, fretes e cronograma de entregas de materiais direto ao cliente.</p></div></article>
+      <article class="showcase-card" data-cat="construcao"><img class="showcase-image" src="tela-sistema.png" alt="Venda Balcão" loading="lazy"/><div class="showcase-copy"><h3>Vendas e Entregas</h3><p>Gerencie cargas, fretes e cronograma de entregas de materiais direto ao cliente.</p></div></article>
 
-      <article class="showcase-card" data-cat="petshops"><img class="showcase-image" src="sua-foto.png" alt="Estética Pet" loading="lazy"/><div class="showcase-copy"><h3>Agendamentos e Vacinas</h3><p>Histórico completo do animal, controle de banho e tosa e alertas de vacina.</p></div></article>
+      <article class="showcase-card" data-cat="petshops"><img class="showcase-image" src="tela-sistema.png" alt="Estética Pet" loading="lazy"/><div class="showcase-copy"><h3>Agendamentos e Vacinas</h3><p>Histórico completo do animal, controle de banho e tosa e alertas de vacina.</p></div></article>
 
-      <article class="showcase-card" data-cat="distribuidoras"><img class="showcase-image" src="sua-foto.png" alt="Faturamento rápido" loading="lazy"/><div class="showcase-copy"><h3>Faturamento e Atacado</h3><p>Emissão rápida de notas fiscais (NF-e) em lote e controle de rotas de entrega.</p></div></article>
+      <article class="showcase-card" data-cat="distribuidoras"><img class="showcase-image" src="tela-sistema.png" alt="Faturamento rápido" loading="lazy"/><div class="showcase-copy"><h3>Faturamento e Atacado</h3><p>Emissão rápida de notas fiscais (NF-e) em lote e controle de rotas de entrega.</p></div></article>
 
-      <article class="showcase-card" data-cat="barbearias"><img class="showcase-image" src="sua-foto.png" alt="Comissão profissionais" loading="lazy"/><div class="showcase-copy"><h3>Agenda e Comissões</h3><p>Gestão simplificada de horários de atendimento e comissão dos profissionais.</p></div></article>
+      <article class="showcase-card" data-cat="barbearias"><img class="showcase-image" src="tela-sistema.png" alt="Comissão profissionais" loading="lazy"/><div class="showcase-copy"><h3>Agenda e Comissões</h3><p>Gestão simplificada de horários de atendimento e comissão dos profissionais.</p></div></article>
 
-      <article class="showcase-card" data-cat="hortifruti"><img class="showcase-image" src="sua-foto.png" alt="Integração Balança" loading="lazy"/><div class="showcase-copy"><h3>Integração com Balanças</h3><p>Venda rápida pesando direto no caixa com leitura automática de etiquetas.</p></div></article>
+      <article class="showcase-card" data-cat="hortifruti"><img class="showcase-image" src="tela-sistema.png" alt="Integração Balança" loading="lazy"/><div class="showcase-copy"><h3>Integração com Balanças</h3><p>Venda rápida pesando direto no caixa com leitura automática de etiquetas.</p></div></article>
 
-      <article class="showcase-card" data-cat="servicos"><img class="showcase-image" src="sua-foto.png" alt="Faturamento Contratos" loading="lazy"/><div class="showcase-copy"><h3>Recorrência e Contratos</h3><p>Gestão automatizada de mensalidades, contratos e serviços recorrentes.</p></div></article>
+      <article class="showcase-card" data-cat="servicos"><img class="showcase-image" src="tela-sistema.png" alt="Faturamento Contratos" loading="lazy"/><div class="showcase-copy"><h3>Recorrência e Contratos</h3><p>Gestão automatizada de mensalidades, contratos e serviços recorrentes.</p></div></article>
 
     </div>
+    <div class="showcase-actions"><button class="btn btn-outline" id="showAllCards" type="button">Ver todas as soluções</button></div>
   </div>
 </section>
 
@@ -232,7 +259,7 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
     <div>
       <span class="eyebrow-badge">Por que escolher a RTI</span>
       <h2 class="section-title">A parceria que o seu negócio precisa para crescer.</h2>
-      <p class="section-copy">Garante mais estabilidade, agilidade nas vendas e controle total da sua operação com quem entende as necessidades do comércio varejista.</p>
+      <p class="section-copy">Tenha mais estabilidade, agilidade nas vendas e controle da sua operação com atendimento próximo.</p>
     </div>
     <div class="promise-list">
       <div class="promise-item"><strong>Sistema Integrado</strong><span>Gerencie PDV, estoque e financeiro em um só lugar, sem dor de cabeça.</span></div>
@@ -242,7 +269,7 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
   </div>
 </section>
 
-<section class="section-footer-cta">
+<section class="section-footer-cta" id="contato">
   <div class="container footer-cta-box">
     <div>
       <span class="eyebrow-badge">Fale com a RTI</span>
@@ -256,6 +283,13 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
   </div>
 </section>
 
+<section class="legal-section" aria-label="Informações legais">
+  <div class="container legal-grid">
+    <div id="privacidade"><h2>Privacidade</h2><p>As informações enviadas pelo WhatsApp são usadas somente para atendimento comercial e demonstração do sistema. A RTI Sistemas 360 não vende dados pessoais.</p></div>
+    <div id="termos"><h2>Termos de uso</h2><p>Recursos, implantação e condições comerciais são apresentados durante a demonstração. A contratação acontece somente após a confirmação do cliente.</p></div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container footer-grid">
     <div><strong>RTI Sistemas 360</strong><p>Sistema comercial para mercados, lojas e restaurantes.</p></div>
@@ -264,7 +298,7 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
       <a href="tel:+5575981927218">📞 (75) 98192-7218</a>
       <a href="https://wa.me/5575981927218" target="_blank" rel="noreferrer">💬 WhatsApp: (75) 98192-7218</a>
     </div>
-    <div class="footer-meta">© <span id="year"></span> RTI Sistemas 360. Todos os direitos reservados.</div>
+    <div class="footer-meta">© <span id="year"></span> RTI Sistemas 360. Todos os direitos reservados.<div class="legal-links"><a href="#privacidade">Privacidade</a><a href="#termos">Termos de uso</a></div></div>
   </div>
 </footer>
 
@@ -280,13 +314,24 @@ PDV, estoque, financeiro e gestão comercial integrados em um sistema rápido, s
 document.getElementById('year').textContent = new Date().getFullYear();
 const chips = document.querySelectorAll('.filter-chip');
 const cards = document.querySelectorAll('#showcase .showcase-card');
+document.querySelectorAll('.showcase-image').forEach(image => image.addEventListener('error', () => {
+  image.src = 'tela-sistema.png';
+}, { once: true }));
+cards.forEach((card,index) => { if(index >= 8) card.classList.add('is-extra'); });
+const showAllButton = document.getElementById('showAllCards');
+showAllButton.addEventListener('click', () => {
+  cards.forEach(card => card.classList.remove('is-extra'));
+  showAllButton.hidden = true;
+});
 chips.forEach(chip => chip.addEventListener('click', () => {
   chips.forEach(c => c.classList.remove('is-active'));
   chip.classList.add('is-active');
   const f = chip.dataset.filter;
   cards.forEach(card => {
+    card.classList.remove('is-extra');
     card.style.display = (f === 'todos' || card.dataset.cat === f) ? '' : 'none';
   });
+  showAllButton.hidden = true;
 }));
 </script>
 </body>
